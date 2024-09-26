@@ -21,15 +21,16 @@ checkboxes = driver.find_elements(By.XPATH,"//input[@type = 'checkbox' and conta
 #     print(i.get_attribute('id'))
 # time.sleep(5)
 
+# Select all with skip 2
 # for i in range(0,len(checkboxes),2):
 #     checkboxes[i].click()
 #     print(checkboxes[i].get_attribute('id'))
 
 # Select last 3 checkboxes
-l = checkboxes[-3:]
-for i in l:
-    i.click()
-    print(i.get_attribute('id'))
+# l = checkboxes[-3:]
+# for i in l:
+#     i.click()
+#     print(i.get_attribute('id'))
 
 # Select first 2 checkboxes
 # for i in range(len(checkboxes)):
@@ -38,8 +39,15 @@ for i in l:
 #         print(checkboxes[i].get_attribute('id'))
 
 # Clearing all check boxes
-for i in checkboxes:
-    if i.is_selected():
-        i.click()
+# for i in checkboxes:
+#     if i.is_selected():
+#         i.click()
+
+# Extract any columns all data from a web page
+# col_data = driver.find_elements(By.XPATH,'//*[@name = "BookTable"]//tr//td')
+# # print(len(col_data))
+# for i in range(0,len(col_data),4):
+#     print(col_data[i].text)
+
 
 driver.quit()
