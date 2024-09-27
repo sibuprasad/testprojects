@@ -9,6 +9,7 @@ service = Service(r"C:\Users\sibup\Downloads\Drivers\chromedriver.exe")
 driver = webdriver.Chrome(service=service)
 driver.get("https://the-internet.herokuapp.com/javascript_alerts")
 driver.maximize_window()
+# driver.implicitly_wait(10)
 
 driver.find_element(By.XPATH,'//button[@onclick="jsPrompt()"]').click()
 alert_win = driver.switch_to.alert
