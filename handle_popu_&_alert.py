@@ -1,5 +1,4 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -7,17 +6,18 @@ from selenium.webdriver.support.select import Select
 
 service = Service(r"C:\Users\sibup\Downloads\Drivers\chromedriver.exe")
 driver = webdriver.Chrome(service=service)
-driver.get("https://the-internet.herokuapp.com/javascript_alerts")
+# driver.get("https://the-internet.herokuapp.com/javascript_alerts")
 driver.maximize_window()
 # driver.implicitly_wait(10)
 
-driver.find_element(By.XPATH,'//button[@onclick="jsConfirm()"]').click()
-alert_win = driver.switch_to.alert
+# driver.find_element(By.XPATH,'//button[@onclick="jsConfirm()"]').click()
+# alert_win = driver.switch_to.alert
 # alert_win.send_keys("Hello World!")
 # print(alert_win.text)         # print the alert text
 # alert_win.accept()            # Close alert window by using "OK" key
 # alert_win.dismiss()           # Close alert window by using "CANCEL" key
 
-
+driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth")
 time.sleep(5)
+
 driver.quit()
