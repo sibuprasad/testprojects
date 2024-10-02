@@ -11,9 +11,9 @@ driver.get("https://the-internet.herokuapp.com/javascript_alerts")
 driver.maximize_window()
 # driver.implicitly_wait(10)
 
-driver.find_element(By.XPATH,'//button[@onclick="jsPrompt()"]').click()
+driver.find_element(By.XPATH,'//button[@onclick="jsConfirm()"]').click()
 alert_win = driver.switch_to.alert
-alert_win.send_keys("Hello World!")
+# alert_win.send_keys("Hello World!")
 # print(alert_win.text)         # print the alert text
 # alert_win.accept()            # Close alert window by using "OK" key
 # alert_win.dismiss()           # Close alert window by using "CANCEL" key
