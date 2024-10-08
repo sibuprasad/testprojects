@@ -18,7 +18,7 @@ drpd_ele = Select(driver.find_element(By.XPATH,'//*[@id="country"]'))
 
 drpd = drpd_ele.options
 for i in range(len(drpd)):
-    if drpd[i].text == "France":
+    if drpd[i].text == "India":
         drpd[i].click()
         print(drpd[i].text)
 
