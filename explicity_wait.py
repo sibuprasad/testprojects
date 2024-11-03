@@ -26,7 +26,7 @@ try:
             wait.until(EC.visibility_of_element_located((By.XPATH, '(//*[@class="blackText font20 code lineHeight36"])[1]')))
             break
     print(driver.find_element(By.XPATH, '(//*[@class="blackText font20 code lineHeight36"])[1]').text)
-
+    time.sleep(2)
 except Exception as e:
     print("Error message: ", e)
 

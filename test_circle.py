@@ -1,4 +1,4 @@
-from Projects.testprojects import shape
+import shape
 import pytest
 
 class TestCircle:

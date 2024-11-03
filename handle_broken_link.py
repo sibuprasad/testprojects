@@ -19,6 +19,7 @@ valid_link = []
 
 for i in brokenlinks:
     url = i.get_attribute('href')
+
     try:
         res = request.head(url)
     except:
